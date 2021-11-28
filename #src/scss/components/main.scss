@@ -1,14 +1,88 @@
-.fullpage {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+.header {
+  &__bg {
+    background-image: url(../../images/bg.jpg);
+    background-size: cover;
     height: 100vh;
+  }
+
+  &__inner {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 110px;
+
+
+    .menu {
+      margin-top: 15px;
+      margin-left: 40px;
+
+      &__list {
+        display: flex;
+      }
+
+      &__item {
+        color: #fff;
+        background-color: transparent;
+        border-radius: 25px;
+        padding: 7px;
+        cursor: pointer;
+        transition: all .2s ease;
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        &:hover {
+          background-color: rgb(255, 255, 255);
+          border-radius: 25px;
+          color: black;
+          padding: 7px;
+        }
+      }
+
+      &__link {
+        font-size: 12px;
+        color: inherit;
+      }
+    }
+  }
+
+  &__main {
+    text-align: center;
+    & h2 {
+      font-weight: bold;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__beans {
+    margin-bottom: 35px;
+
+    & img {
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    & p {
+      margin: 0 auto;
+      font-size: 24px;
+      max-width: 530px;
+    }
+  }
+  &__btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 42px;
+    margin-top: 20px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 3px;
+    transition: background-color .3s ease;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.404);
+    }
   }
 }
