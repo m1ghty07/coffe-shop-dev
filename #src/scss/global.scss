@@ -54,7 +54,7 @@ select {
 }
 
 body {
-  color: #fff;
+  color: #000;
   font-family: "Merienda";
   background-color: #fff;
   font-size: 18px;
@@ -80,9 +80,15 @@ body {
   color: black;
   font-size: 24px;
   margin-bottom: 20px;
-  @media (max-width:640px) {
-       font-size: 18px;
-     }
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
+}
+
+.secondary {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 260px !important;
 }
 
 .fade {

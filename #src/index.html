@@ -12,47 +12,8 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__bg">
-        <div class="container">
-          <div class="header__inner">
-            <div class="header__logo">
-              <a href="#">
-                <img src="images/logo.svg" alt="logo" />
-              </a>
-            </div>
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="" class="menu__link">Our Coffe</a>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">For your pleasure</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="burger">
-              <span></span>
-            </div>
-          </div>
-          <div class="header__main">
-            <h2>Everything You Love About Coffee</h2>
-            <div class="header__beans">
-              <img src="images/beans-logo.svg" alt="" />
-            </div>
-            <div class="header__text">
-              <p>
-                We makes every day full of energy and taste Want to try our
-                beans?
-              </p>
-            </div>
-            <button class="header__btn no-btn">More</button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-     <main class="main">
+    @@include('_header.html')
+    <main class="main">
       <section class="about">
         <div class="container">
           <div class="about__inner">
@@ -82,7 +43,7 @@
         </div>
       </section>
 
-     <section class="best">
+      <section class="best">
         <div class="container">
           <div class="best__inner">
             <h3 class="best__title title">Our best</h3>
@@ -132,30 +93,7 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__logo">
-              <a href="#">
-                <img src="images/logo-black.svg" alt="footer-logo" />
-              </a>
-            </div>
-            <div class="menu">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="" class="menu__link">Our Coffe</a>
-                </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">For your pleasure</a>
-                </li>
-              </ul>
-            </div>
-        </div>
-        <div class="footer__beans">
-          <img src="images/beans-logo-black.svg" alt="secondary-logo">
-        </div>
-      </div>
-    </footer> 
+    @@include('_footer.html')
     <script src="js/script.min.js"></script>
   </body>
 </html>
