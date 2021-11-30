@@ -10,6 +10,7 @@ html {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul[class],
@@ -73,6 +74,15 @@ body {
   border-radius: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+.title {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 20px;
+  @media (max-width:640px) {
+       font-size: 18px;
+     }
 }
 
 .fade {

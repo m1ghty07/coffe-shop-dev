@@ -1,0 +1,26 @@
+.about {
+  background-color: #fff;
+  padding: 80px 0 100px;
+  text-align: center;
+  color: black;
+  @media (max-width:640px) {
+       padding: 40px 0 50px;
+     }
+
+  &__beans {
+    & img {
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    & p {
+      margin: 30px auto 0;
+      font-size: 14px;
+      max-width: 590px;
+     @media (max-width:640px) {
+       font-size: 12px;
+     }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Merienda";
   font-display: swap;
@@ -14,6 +16,87 @@
   font-style: bold;
 }
 
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a,
+a:not([class]) {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -28,6 +111,7 @@ html {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul[class],
@@ -93,6 +177,12 @@ body {
   cursor: pointer;
 }
 
+.title {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
 .fade {
   -webkit-animation-name: fade;
           animation-name: fade;
@@ -155,9 +245,9 @@ body {
   border-radius: 25px;
   padding: 7px;
   cursor: pointer;
-  -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .header__inner .menu__item:not(:last-child) {
@@ -210,19 +300,207 @@ body {
   color: white;
   padding: 10px 42px;
   margin-top: 20px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 3px;
-  -webkit-transition: background-color .3s ease;
-  -o-transition: background-color .3s ease;
-  transition: background-color .3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .header__btn:hover {
   background-color: rgba(255, 255, 255, 0.404);
+}
+
+.about {
+  background-color: #fff;
+  padding: 80px 0 100px;
+  text-align: center;
+  color: black;
+}
+
+.about__beans img {
+  margin: 0 auto;
+}
+
+.about__text p {
+  margin: 30px auto 0;
+  font-size: 14px;
+  max-width: 590px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 8px;
+  max-width: 220px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.card__description {
+  font-size: 14px;
+  color: black;
+  max-width: 177px;
+  margin: 15px 0;
+}
+
+.card__price {
+  margin-left: auto;
+  font-weight: 700;
+  color: black;
+}
+
+.card:hover {
+  -webkit-box-shadow: 4px 1px 27px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 1px 27px 2px rgba(34, 60, 80, 0.2);
+  background-color: rgba(255, 255, 255, 0.904);
+}
+
+.best {
+  background-image: url(../../images/paper-bg.jpg);
+  padding: 80px 0 110px;
+}
+
+.best__title {
+  text-align: center;
+}
+
+.best__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.best__item:not(:last-child) {
+  margin-right: 71px;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer__logo {
+  margin-right: 40px;
+}
+
+.footer .menu {
+  color: black;
+}
+
+.footer .menu__list {
+  margin-top: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer .menu__item {
+  color: #000;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 7px;
+  border-radius: 25px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer .menu__item:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer .menu__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.footer .menu__link {
+  font-size: 12px;
+  color: inherit;
+}
+
+.footer__beans img {
+  margin: 0 auto;
+}
+
+@media (max-width: 920px) {
+  .best__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .best {
+    padding: 40px 0 50px;
+  }
+
+  .best__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .best__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .about {
+    padding: 40px 0 50px;
+  }
+
+  .about__text p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -240,9 +518,9 @@ body {
     position: absolute;
     right: 45px;
     opacity: 0;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .header__inner .menu__list.active {
@@ -271,35 +549,35 @@ body {
     background-color: #fff;
     position: relative;
     display: block;
-    -webkit-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
 
   .header__inner .burger span:after {
-    content: '';
+    content: "";
     height: 2px;
     width: 25px;
     background-color: #fff;
     position: absolute;
     left: 0;
     top: 7px;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .header__inner .burger span:before {
-    content: '';
+    content: "";
     height: 2px;
     width: 25px;
     background-color: #fff;
     position: absolute;
     left: 0;
     bottom: 7px;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .header__inner .burger span.active {
@@ -327,6 +605,33 @@ body {
   .header__text p {
     font-size: 20px;
   }
+
+  .footer__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__logo {
+    margin: 0;
+  }
 }
 
-.webp .header__bg { background-image: url(../../images/bg.webp); }
+@media (max-height: 425px) {
+  .header__inner {
+    margin-bottom: 15px;
+  }
+
+  .header__main h2 {
+    font-size: 22px;
+  }
+
+  .header__text p {
+    font-size: 15px;
+  }
+}
+
+.webp .header__bg{ background-image: url(../../images/bg.webp); }
+
+.webp .best{ background-image: url(../../images/paper-bg.webp); }
