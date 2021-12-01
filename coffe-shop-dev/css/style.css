@@ -189,6 +189,10 @@ body {
   height: 260px !important;
 }
 
+.secondary__title {
+  margin-bottom: 0 !important;
+}
+
 .fade {
   -webkit-animation-name: fade;
           animation-name: fade;
@@ -319,6 +323,12 @@ body {
 
 .header__btn:hover {
   background-color: rgba(255, 255, 255, 0.404);
+}
+
+.header__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .about {
@@ -646,6 +656,10 @@ body {
 @media (max-width: 640px) {
   .title {
     font-size: 18px;
+  }
+
+  .header__title {
+    font-size: 28px;
   }
 
   .about {
