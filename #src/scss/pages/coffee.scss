@@ -1,5 +1,6 @@
 .beans {
   padding: 70px 0 60px;
+  color: #000;
   &__inner {
     display: flex;
     justify-content: center;
@@ -26,5 +27,57 @@
     width: 240px;
     background-color: #000;
     margin: 0 auto;
+  }
+}
+
+.market {
+  color: #000;
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    &__search {
+      margin-right: 70px;
+      & input {
+        background: #ffffff;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        border: none;
+        padding: 6px 30px;
+        margin-left: 10px;
+        outline: none;
+      }
+    }
+    &__tabs {
+      display: flex;
+      align-items: center;
+      & span {
+        margin-right: 35px;
+      }
+      & .tab {
+        background: #ffffff;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px 0px 0px 4px;
+        padding: 5px 20px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+    margin: 30px;
+    & .country {
+      margin-left: auto;
+      padding: 10px 0;
+    }
   }
 }

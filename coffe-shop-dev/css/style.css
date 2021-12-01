@@ -155,7 +155,7 @@ select {
 }
 
 body {
-  color: #000;
+  color: #fff;
   font-family: "Merienda";
   background-color: #fff;
   font-size: 18px;
@@ -470,6 +470,7 @@ body {
 
 .beans {
   padding: 70px 0 60px;
+  color: #000;
 }
 
 .beans__inner {
@@ -504,6 +505,86 @@ body {
   width: 240px;
   background-color: #000;
   margin: 0 auto;
+}
+
+.market {
+  color: #000;
+}
+
+.market .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px;
+}
+
+.market .filter__search {
+  margin-right: 70px;
+}
+
+.market .filter__search input {
+  background: #ffffff;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border: none;
+  padding: 6px 30px;
+  margin-left: 10px;
+  outline: none;
+}
+
+.market .filter__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.market .filter__tabs span {
+  margin-right: 35px;
+}
+
+.market .filter__tabs .tab {
+  background: #ffffff;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px 0px 0px 4px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.market .filter__tabs .tab:not(:last-child) {
+  margin-right: 5px;
+}
+
+.market__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.market__item {
+  -webkit-filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+  margin: 30px;
+}
+
+.market__item .country {
+  margin-left: auto;
+  padding: 10px 0;
 }
 
 @media (max-width: 920px) {
