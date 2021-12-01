@@ -11,6 +11,13 @@
   }
   &__img {
     & img {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &__logo {
+    & img {
       margin: 25px auto 25px;
     }
   }
@@ -32,13 +39,25 @@
 
 .market {
   color: #000;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
   .filter {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 60px;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
     &__search {
       margin-right: 70px;
+      @media (max-width: 639px) {
+        margin-right: 0;
+      }
       & input {
         background: #ffffff;
         box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
@@ -47,11 +66,22 @@
         padding: 6px 30px;
         margin-left: 10px;
         outline: none;
+        @media (max-width: 640px) {
+          margin-top: 10px;
+          display: block;
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 992px) {
+        margin-bottom: 20px;
       }
     }
     &__tabs {
       display: flex;
       align-items: center;
+      @media (max-width: 640px) {
+        display: block;
+      }
       & span {
         margin-right: 35px;
       }
@@ -61,6 +91,9 @@
         border-radius: 4px 0px 0px 4px;
         padding: 5px 20px;
         cursor: pointer;
+        @media (max-width: 640px) {
+          margin: 10px 0;
+        }
         &:not(:last-child) {
           margin-right: 5px;
         }
@@ -69,8 +102,8 @@
   }
   &__items {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
   }
   &__item {
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
