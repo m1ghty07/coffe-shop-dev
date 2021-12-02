@@ -42,6 +42,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .filter {
     display: flex;
@@ -104,10 +105,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 900px;
   }
   &__item {
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
-    margin: 30px;
+    margin: 35px;
     & .country {
       margin-left: auto;
       padding: 10px 0;

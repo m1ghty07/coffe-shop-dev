@@ -1,0 +1,36 @@
+.decsription {
+  color: black;
+  padding: 70px 0 30px;
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+  &__img {
+    margin-right: 55px;
+      @media (max-width:767px) {
+        margin: 0;
+      }
+    & img {
+      @media (max-width:767px) {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+  }
+  &__logo {
+    margin: 25px 0 25px;
+    & img {
+      margin: 0 auto;
+    }
+  }
+  &__country {
+    margin-bottom: 20px;
+  }
+  &__text {
+    max-width: 420px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}

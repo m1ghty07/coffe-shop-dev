@@ -92,7 +92,19 @@ body {
 }
 
 .secondary__title {
-  margin-bottom: 0 !important; 
+  margin-bottom: 0 !important;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.strong {
+  font-weight: 700;
 }
 
 .fade {
